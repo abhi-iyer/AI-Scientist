@@ -1,0 +1,98 @@
+[
+    {
+        "High-Level": {
+            "Name": "energy_minimizing_cortex",
+            "Title": "The Energy-Minimizing Neocortex: A Self-Organizing Framework for Information Processing",
+            "Description": "The neocortex operates as a self-organizing, energy-minimizing system that balances stability and adaptability. By minimizing energy expenditure while maximizing information efficiency, it dynamically adjusts its processing to optimize predictions, compress information, and maintain robust representations. This framework unifies predictive coding, attractor dynamics, and information theory into a cohesive model of cortical function.",
+            "Significance": 9
+        },
+        "Mid-Level": {
+            "Name": "predictive_energy_minimization",
+            "Title": "Predictive Energy Minimization: A Computational Model of Neocortical Function",
+            "Description": "This model frames neocortical computation as a predictive coding process that minimizes energy expenditure by reducing prediction errors. It dynamically adjusts neural activity to balance stability and adaptability, optimizing information processing while maintaining energy efficiency. The model integrates attractor dynamics and self-organization to explain how the cortex robustly represents and updates information.",
+            "Theoretical_Basis": "Predictive coding, attractor dynamics, self-organization, energy efficiency.",
+            "Relation_to_Theory": "Implements the high-level theory by operationalizing the energy-minimizing neocortex as a predictive coding system that balances stability and adaptability while minimizing energy expenditure.",
+            "Feasibility": 8
+        },
+        "Low-Level": {
+            "Name": "stdp_energy_minimization",
+            "Title": "STDP-Based Energy Minimization: A Neural Mechanism for Predictive Coding",
+            "Description": "This mechanism uses spike-timing-dependent plasticity (STDP) to minimize prediction errors by strengthening synapses that predict neural activity and weakening those that do not. Balanced inhibitory-excitatory interactions stabilize network dynamics, while homeostatic plasticity ensures long-term stability. Together, these mechanisms enable energy-efficient, real-time learning in the cortex.",
+            "Biological_Basis": "STDP is well-documented in experimental neuroscience, and balanced inhibitory-excitatory interactions are critical for cortical stability. Homeostatic plasticity mechanisms, such as synaptic scaling, are also supported by empirical evidence.",
+            "Relation_to_Model": "Implements the 'Predictive Energy Minimization' model by providing a biologically plausible mechanism for minimizing prediction errors and balancing stability with adaptability in real-time.",
+            "Testability": 9
+        }
+    },
+    {
+        "High-Level": {
+            "Name": "critical_cortex",
+            "Title": "The Critical Neocortex: A Dynamical Systems Framework for Information Processing",
+            "Description": "The neocortex operates near criticality, balancing order and disorder to maximize computational flexibility and efficiency. By leveraging phase transitions and temporal dynamics, it integrates information across multiple timescales and adapts to varying environmental demands. This framework unifies criticality, phase transitions, and information integration into a cohesive model of cortical function.",
+            "Significance": 9
+        },
+        "Mid-Level": {
+            "Name": "critical_reservoir",
+            "Title": "Critical Reservoir Computing: A Dynamical Systems Model of Neocortical Function",
+            "Description": "This model frames neocortical computation as a reservoir computing system operating near criticality. By leveraging the rich, high-dimensional dynamics of recurrent neural networks, it balances order and disorder to maximize computational flexibility and efficiency. The model explains how the cortex integrates information across multiple timescales and adapts to varying environmental demands.",
+            "Theoretical_Basis": "Reservoir computing, criticality, dynamical systems, recurrent neural networks.",
+            "Relation_to_Theory": "Implements the high-level theory by operationalizing the critical neocortex as a reservoir computing system that balances order and disorder to maximize computational flexibility and efficiency.",
+            "Feasibility": 8
+        },
+        "Low-Level": {
+            "Name": "stdp_criticality",
+            "Title": "STDP-Based Criticality: A Neural Mechanism for Reservoir Computing",
+            "Description": "This mechanism uses spike-timing-dependent plasticity (STDP) to shape network connectivity and maintain critical dynamics in recurrent neural networks. Balanced inhibitory-excitatory interactions stabilize the network's dynamical regime, while homeostatic plasticity mechanisms regulate overall activity. Together, these mechanisms enable the cortex to operate near criticality, supporting flexible and efficient information processing.",
+            "Biological_Basis": "STDP is well-documented in experimental neuroscience, and balanced inhibitory-excitatory interactions are critical for maintaining network stability. Homeostatic plasticity mechanisms, such as synaptic scaling, are also supported by empirical evidence.",
+            "Relation_to_Model": "Implements the 'Critical Reservoir Computing' model by providing a biologically plausible mechanism for maintaining critical dynamics and enabling flexible, efficient information processing in recurrent neural networks.",
+            "Testability": 8
+        }
+    },
+    {
+        "High-Level": {
+            "Name": "multi_scale_emergent_cortex",
+            "Title": "The Multi-Scale Emergent Neocortex: A Complex Systems Framework for Information Processing",
+            "Description": "The neocortex operates as a multi-scale emergent system, integrating information across different spatial and temporal scales to generate coherent and adaptive behavior. By leveraging principles from complex systems and statistical mechanics, it balances local processing with global integration, enabling robust and flexible information processing. This framework unifies emergent properties, multi-scale interactions, and adaptive behavior into a cohesive model of cortical function.",
+            "Significance": 9
+        },
+        "Mid-Level": {
+            "Name": "hierarchical_predictive_coding",
+            "Title": "Hierarchical Predictive Coding: A Multi-Scale Model of Neocortical Function",
+            "Description": "This model frames neocortical computation as a hierarchical predictive coding process that integrates information across different spatial and temporal scales. By minimizing prediction errors at each level of the hierarchy, it enables the coherent and adaptive processing of information. The model explains how the cortex balances local and global information integration to generate robust and flexible behavior.",
+            "Theoretical_Basis": "Predictive coding, hierarchical processing, multi-scale interactions, emergent properties.",
+            "Relation_to_Theory": "Implements the high-level theory by operationalizing the multi-scale emergent neocortex as a hierarchical predictive coding system that integrates information across different spatial and temporal scales.",
+            "Feasibility": 9
+        },
+        "Low-Level": {
+            "Name": "stdp_hierarchical_predictive_coding",
+            "Title": "STDP-Based Hierarchical Predictive Coding: A Neural Mechanism for Multi-Scale Information Processing",
+            "Description": "This mechanism uses spike-timing-dependent plasticity (STDP) to minimize prediction errors across multiple spatial and temporal scales by adjusting synaptic strengths based on temporal correlations between pre- and post-synaptic activity. Balanced inhibitory-excitatory interactions maintain network stability, while homeostatic plasticity mechanisms regulate overall activity. Together, these mechanisms enable the cortex to perform hierarchical predictive coding and integrate information across multiple scales in real-time.",
+            "Biological_Basis": "STDP is well-documented in experimental neuroscience, and balanced inhibitory-excitatory interactions are critical for maintaining network stability. Homeostatic plasticity mechanisms, such as synaptic scaling, are also supported by empirical evidence.",
+            "Relation_to_Model": "Implements the 'Hierarchical Predictive Coding' model by providing a biologically plausible mechanism for minimizing prediction errors and integrating information across multiple spatial and temporal scales in the cortex.",
+            "Testability": 9
+        }
+    },
+    {
+        "High-Level": {
+            "Name": "hierarchical_modular_cortex",
+            "Title": "\u6781\u7ee7\u7eed...\u7ee7\u7eed...\u63a5\u4e0a\u6587\u3002",
+            "Description": "The neocortex operates as a hierarchical modular system, processing information through a hierarchy of modules, each specializing in different levels of abstraction. By leveraging principles from hierarchical systems\u6781\u7ee7\u7eed...\u7ee7\u7eed...\u63a5\u4e0a\u6587\u3002",
+            "Significance": 9
+        },
+        "Mid-Level": {
+            "Name": "hierarchical_predictive_coding",
+            "Title": "Hierarchical Predictive Coding: A Modular Model of Neocortical Function",
+            "Description": "This model frames neocortical computation as a hierarchical predictive coding process that integrates information through a hierarchy of modules, each specializing in different levels of abstraction. By minimizing prediction errors at each level of the hierarchy, it enables the coherent and adaptive processing of information. The model explains how the cortex balances local specialization with global integration to generate robust and flexible behavior.",
+            "Theoretical_Basis": "Predictive coding, hierarchical processing, modular organization, information integration.",
+            "Relation_to_Theory": "Implements the high-level theory by operationalizing the hierarchical modular neocortex as a hierarchical predictive coding system that integrates information through a hierarchy of modules, each specializing in different levels of abstraction.",
+            "Feasibility": 9
+        },
+        "Low-Level": {
+            "Name": "stdp_hierarchical_predictive_coding",
+            "Title": "STDP-Based Hierarchical Predictive Coding: A Neural Mechanism for Multi-Level Information Processing",
+            "Description": "This mechanism uses spike-timing-dependent plasticity (STDP) to minimize prediction errors across multiple levels of abstraction by adjusting synaptic strengths based on temporal correlations between pre- and post-synaptic activity. Balanced inhibitory-excitatory interactions maintain network stability, while homeostatic plasticity mechanisms regulate overall activity. Together, these mechanisms enable the cortex to perform hierarchical predictive coding and integrate information across multiple levels of abstraction in real-time.",
+            "Biological_Basis": "STDP is well-documented in experimental neuroscience, and balanced inhibitory-excitatory interactions are critical for maintaining network stability. Homeostatic plasticity mechanisms, such as synaptic scaling, are also supported by empirical evidence.",
+            "Relation_to_Model": "Implements the 'Hierarchical Predictive Coding' model by providing a biologically plausible mechanism for minimizing prediction errors and integrating information across multiple levels of abstraction in the cortex.",
+            "Testability": 9
+        }
+    }
+]

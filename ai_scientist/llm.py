@@ -39,9 +39,11 @@ AVAILABLE_LLMS = [
     "deepseek-chat",
     "deepseek-coder",
     "deepseek-reasoner",
+    "deepseek-v3-openrouter"
     # Google Gemini models
     "gemini-1.5-flash",
     "gemini-1.5-pro",
+    "gemini-1.5-flash-8b",
 ]
 
 
@@ -131,7 +133,7 @@ def get_response_from_llm(
         msg,
         client,
         model,
-        system_message,
+        system_message=None,
         print_debug=False,
         msg_history=None,
         temperature=0.75,
@@ -248,9 +250,26 @@ def get_response_from_llm(
         )
         content = response.choices[0].message.content
         new_msg_history = new_msg_history + [{"role": "assistant", "content": content}]
+    elif model in ["deepseek-v3-openrouter"]:
+        new_msg_history = msg_history + [{"role": "user", "content": msg}]
+        response = client.chat.completions.create(
+            model="deepseek/deepseek-chat:free",
+            messages=[
+                {"role": "system", "content": system_message},
+                *new_msg_history,
+            ],
+            temperature=temperature,
+            max_tokens=MAX_NUM_TOKENS,
+            n=1,
+            stop=None,
+        )
+        content = response.choices[0].message.content
+        new_msg_history = new_msg_history + [{"role": "assistant", "content": content}]
     elif "gemini" in model:
         new_msg_history = msg_history + [{"role": "user", "content": msg}]
-        gemini_contents = [{"role": "system", "parts": system_message}]
+        
+        gemini_contents = []
+        
         for m in new_msg_history:
             gemini_contents.append({"role": m["role"], "parts": m["content"]})
         response = client.generate_content(
@@ -306,6 +325,41 @@ def extract_json_between_markers(llm_output):
     return None  # No valid JSON found
 
 
+def extract_json_between_markers_for_math(llm_output):
+    json_pattern = r"```json(.*?)```"
+    matches = re.findall(json_pattern, llm_output, re.DOTALL)
+
+    if not matches:
+        # Fallback: Try to find any JSON-like content in the output
+        json_pattern = r"\{.*?\}"
+        matches = re.findall(json_pattern, llm_output, re.DOTALL)
+
+    for json_string in matches:
+        json_string = json_string.strip()
+
+        try:
+            # standard JSON parsing
+            parsed_json = json.loads(json_string)
+            return parsed_json
+        except json.JSONDecodeError:
+            pass  # continue to fallback
+
+        try:
+            json_text = json_string.replace("\\\\", "\\")
+
+            json_text = re.sub(r"[\x00-\x1F\x7F]", "", json_text)
+
+            match = re.search(r'"Methods"\s*:\s*"([^"]+)"', json_text, re.DOTALL)
+
+            if match:
+                methods_text = match.group(1)
+                return {"Methods": methods_text}
+        except Exception as e:
+            print(f"Error in manual JSON extraction for math: {e}")
+
+    return None
+
+
 def create_client(model):
     if model.startswith("claude-"):
         print(f"Using Anthropic API with model {model}.")
@@ -329,6 +383,12 @@ def create_client(model):
         return openai.OpenAI(
             api_key=os.environ["DEEPSEEK_API_KEY"],
             base_url="https://api.deepseek.com"
+        ), model
+    elif model in ["deepseek-v3-openrouter"]:
+        print(f"Using OpenAI API with {model} via OpenRouter.")
+        return openai.OpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=os.environ["OPENROUTER_API_KEY"],
         ), model
     elif model == "llama3.1-405b":
         print(f"Using OpenAI API with {model}.")
